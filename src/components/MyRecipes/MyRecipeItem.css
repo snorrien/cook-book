@@ -1,0 +1,10 @@
+.card {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+    background: linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(45deg, rgb(234, 9, 137), blue) border-box;
+    border: 5px solid transparent;
+    border-radius: 30px;
+}
+

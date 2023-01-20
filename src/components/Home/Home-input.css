@@ -1,0 +1,13 @@
+.HomeContainer{
+    margin: auto;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.EnterContainer{
+    padding: 5rem;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 20px;
+    
+}

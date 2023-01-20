@@ -1,0 +1,14 @@
+.form-adding {
+    display: flex;
+      margin: auto;
+      margin-bottom: 1em;
+      width: 50%;
+    
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+      padding: 1em;
+      border-radius: 12px;
+      background-color: #FFFF;
+      height: 12em;
+    
+    }
+    
