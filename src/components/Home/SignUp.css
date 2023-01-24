@@ -15,26 +15,17 @@
   border-radius: 20px;
 }
 
-.form-control label {
-  font-size: 100%;
-  position: absolute;
-  left: 0;
-  padding: 0.8em;
-  margin-left: 0.5em;
-  pointer-events: none;
-  transition: all 0.3s ease;
-  color: rgb(100, 100, 100);
+.form-control input:focus{
+  border-color: #8f00be;
 }
 
-.form-control :is(input:focus, input:valid) ~label{
-  border-color: #240370;
-  background-color: white;
-  transform: translateY(-50%) scale(.9);
-  margin: 0em;
-  margin-left: 1.3em;
-  padding: 0.4em;
-  color: #240370;
+.form-control label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: large;
   font-weight: bold;
+  color: black;
+  transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
 }
 
 .control-group {
@@ -95,14 +86,14 @@ button:disabled:active {
   color: #b40e0e;
 }
 
-.password-label{
+.password-label {
   position: relative;
   display: flex;
   align-items: center;
- 
+
 }
 
 i {
   margin-left: -30px;
-  cursor: pointerж
+  cursor: grab;
 }
