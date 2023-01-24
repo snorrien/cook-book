@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "../Modal/Modal";
 import "./NavBar.css";
-import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import { Link, useMatch, useResolvedPath, NavLink } from "react-router-dom";
 import SearchBar from "./SearchBar";
 
 export default function NavBar() {
@@ -11,18 +11,22 @@ export default function NavBar() {
     return (
         <nav className="navbar">
             <div className="navbar-container">
-                <Link className="navbar-name-site" to="/">cook-book</Link>
+                <NavLink className={({ isActive, isPending }) => isActive ? "active" : isPending ? "pending" : ""
+                } to="/">cook-book</NavLink>
             </div>
             <div>
                 <ul id="navbar-nav" className={mobileBar ? "#navbar-nav active" : "#navbar-nav"}>
                     <li className="item-nav">
-                        <CustomLink className="nav-link" aria-current="page" to="/myrecipes">Мои рецепты</CustomLink >
+                        <NavLink className={({ isActive, isPending }) => isActive ? "active" : isPending ? "pending" : ""
+                        } to="/myrecipes">Мои рецепты</NavLink >
                     </li>
                     <li className="item-nav">
-                        <CustomLink className="nav-link" to="/addrecipes">Добавить рецепт</CustomLink >
+                        <NavLink className={({ isActive, isPending }) => isActive ? "active" : isPending ? "pending" : ""
+                        } to="/addrecipes">Добавить рецепт</NavLink >
                     </li>
                     <li className="item-nav">
-                        <CustomLink className="nav-link" to="/wanttry">Хочу попробовать</CustomLink >
+                        <NavLink className={({ isActive, isPending }) => isActive ? "active" : isPending ? "pending" : ""
+                        } to="/wanttry">Хочу попробовать</NavLink>
                     </li>
                     <li>
                         <SearchBar />

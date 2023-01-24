@@ -19,27 +19,21 @@
     position: relative;
 }
 
-.nav-link {
+.item-nav a{
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 600;
     color: white;
-    transition: 0.3s easy in out;
 }
 
-.item-nav :hover {
+.item-nav a:hover,
+.item-nav a.active {
     color: #d4a5e4;
 }
 
 .item-nav :hover :after,
 .item-nav.active :after {
-    content: "";
-    width: 30%;
-    height: 2px;
-    background: #d4a5e4;
-    position: absolute;
-    bottom: -5px;
-    left: 20px;
+    
 }
 
 #mobile {

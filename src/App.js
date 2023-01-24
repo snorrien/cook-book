@@ -1,28 +1,33 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
+import { createBrowserRouter, RouterProvider} from "react-router-dom";
+import Root from "./components/Root";
+import ErrorPage from "./components/NavBar/ErrorPage";
 import WantTry from "./components/WantTry/WantTry";
 import NavBar from "./components/NavBar/NavBar";
 import AddRecipes from "./components/AddRecipes/AddRecipes";
 import MyRecipe from "./components/MyRecipes/MyRecipe";
-import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home";
 
 
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Root />,
+        errorElement: <ErrorPage />,
+        children: [
+            { index: true, path: "/", element: <Home /> },
+            { path: "/myrecipes", element:<MyRecipe /> },
+            { path: "/addrecipes", element: <AddRecipes /> },
+            { path: "/wanttry", element: <WantTry /> }
+        ]
+    },
+]);
+  
+  
 function App() {
     return (
-        <div>
-            <NavBar />
-
-            <div className='container'>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/myrecipes" element={<MyRecipe />} />
-                    <Route path="/addrecipes" element={<AddRecipes />} />
-                    <Route path="/wanttry" element={<WantTry />} />
-                </Routes>
-
-            </div>
-        </div>
+        <RouterProvider router={router} />
     );
 }
 
