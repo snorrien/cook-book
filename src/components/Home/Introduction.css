@@ -1,46 +1,71 @@
-.item--1 {
-    background: #c7c7ff;
-}
-
-.list-advantages li {
-    display: inline;
-    margin: 10px;
-    list-style: square;
-
-
-}
-
 .card-idea {
     width: 50%;
-    height: 100px;
-    color: white;
-    display: flex
+    height: 10rem;
+    color: #a892ee;
+    display: flex;
+    margin: auto;
 }
 
 .card-idea .box-idea {
-    border-radius: 10px;
+    border-radius: 30px;
+    background-color: #fff;
+    border: 3px solid;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-right: 20px;
+    margin-right: 20px;
 }
 
 .box-idea:hover {
     transform: scale(0.95);
     transition: all 0.3s;
+    background: linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(45deg, rgb(234, 9, 137), blue) border-box;
+    border: 5px solid transparent;
+    color: black;
+}
+
+.img-ideas{
+    height: 50px;
 }
 
 .text {
-    font-size: 12px;
+    font-size: 20px;
     font-family: inherit;
     font-weight: 600;
+    color: #a892ee;
 }
 
 #initial {
     padding: 0.8em;
     border: 2px solid rgb(200, 200, 200);
     border-radius: 20px;
-    width: 10%;
+    width: 10em;
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #725AC1;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #725AC1;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #725AC1;
 }
+
+
+#initial:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #725AC1;
+  }
+  
+  #initial:active {
+    transform: scale(0.9);
+  }
