@@ -2,16 +2,15 @@ import "./MyRecipeItem.css";
 
 const MyRecipeItem = (props) => {
     return (
-            <div class="col-sm-4 ">
-                <div class="card ">
-                    
-                    <div class="card-body">
-                        <h5 class="card-title">{props.title}</h5>
-                        <p class="card-text">{props.ingredients}</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
+        <div className ="card-rapper">
+            <div className="card ">
+                <div className="card-body">
+                    <h5 className="card-title">{props.title}</h5>
+                    <p className="card-text">{props.ingredients}</p>
+                    <button>Go somewhere</button>
                 </div>
             </div>
+        </div>
     )
 }
 

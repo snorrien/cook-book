@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import Root from "./components/Root";
 import ErrorPage from "./components/NavBar/ErrorPage";
 import WantTry from "./components/WantTry/WantTry";
-import NavBar from "./components/NavBar/NavBar";
+import MyRecipeItem from "./components/MyRecipes/MyRecipeItem";
 import AddRecipes from "./components/AddRecipes/AddRecipes";
 import MyRecipe from "./components/MyRecipes/MyRecipe";
 import Home from "./components/Home/Home";
@@ -17,7 +17,8 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
             { index: true, path: "/", element: <Home /> },
-            { path: "/myrecipes", element:<MyRecipe /> },
+            { path: "/myrecipes", element: <MyRecipe /> },
+            { path: "/myrecipes/:eventId", element: <MyRecipeItem /> },
             { path: "/addrecipes", element: <AddRecipes /> },
             { path: "/wanttry", element: <WantTry /> }
         ]

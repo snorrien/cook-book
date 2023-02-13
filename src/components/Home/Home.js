@@ -1,12 +1,12 @@
 import React from 'react';
-import Enter from './Enter';
-import SignUp from './SignUp';
+import Introduction from './Introduction';
+import "./Home.css";
 
 const Home = () => {
     return (
         <div>
-            <h2>Home</h2>
-            <SignUp />
+            
+            <Introduction/>
         </div>
 
 

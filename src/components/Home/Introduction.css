@@ -1,0 +1,46 @@
+.item--1 {
+    background: #c7c7ff;
+}
+
+.list-advantages li {
+    display: inline;
+    margin: 10px;
+    list-style: square;
+
+
+}
+
+.card-idea {
+    width: 50%;
+    height: 100px;
+    color: white;
+    display: flex
+}
+
+.card-idea .box-idea {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-idea:hover {
+    transform: scale(0.95);
+    transition: all 0.3s;
+}
+
+.text {
+    font-size: 12px;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+#initial {
+    padding: 0.8em;
+    border: 2px solid rgb(200, 200, 200);
+    border-radius: 20px;
+    width: 10%;
+}

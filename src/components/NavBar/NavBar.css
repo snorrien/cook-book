@@ -1,10 +1,13 @@
 .navbar {
     display: flex;
+    position: fixed;
+    top: 0; 
+    width: 100%;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
     z-index: 1;
-    background-image: linear-gradient(to right, #f906a0, #8f00be);
+    background-image: linear-gradient(to right, #f906a0, #8f00be); 
 }
 
 #navbar-nav {
@@ -29,11 +32,6 @@
 .item-nav a:hover,
 .item-nav a.active {
     color: #d4a5e4;
-}
-
-.item-nav :hover :after,
-.item-nav.active :after {
-    
 }
 
 #mobile {

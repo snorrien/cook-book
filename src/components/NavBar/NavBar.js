@@ -4,15 +4,17 @@ import "./NavBar.css";
 import { Link, useMatch, useResolvedPath, NavLink } from "react-router-dom";
 import SearchBar from "./SearchBar";
 
+
 export default function NavBar() {
     const [modalActive, setModalActive] = useState(false)
     const [mobileBar, setMobileBar] = useState(true)
 
     return (
         <nav className="navbar">
-            <div className="navbar-container">
+            <div className="item-nav">
                 <NavLink className={({ isActive, isPending }) => isActive ? "active" : isPending ? "pending" : ""
                 } to="/">cook-book</NavLink>
+                <img className ="img-egg" src = "/img/favicon.ico" alt="egg"/>
             </div>
             <div>
                 <ul id="navbar-nav" className={mobileBar ? "#navbar-nav active" : "#navbar-nav"}>
