@@ -4,8 +4,14 @@ import "./Home-input.css"
 import useInput from "../hooks/use-input";
 import HttpPost from "../Services/HttpPost"
 
-const SignUp = (props) => {
+const SignUp = () => {
 
+  const [signUp, setSignUp] = useState('Регистрация');
+  const [signUpT, setSignUpT] = useState(true);
+  function changeType() {
+    setSignUp(signUp === 'Регистрация' ? 'Вход' : 'Регистрация');
+    setSignUpT(!(signUpT === true));
+  }
 
   const {
     value: enteredName,
@@ -78,11 +84,12 @@ const SignUp = (props) => {
   return (
     <div className="HomeContainer">
       <div className="EnterContainer" onSubmit={FormSignUp}>
+      <h2 id="heading">{signUp}</h2>
         <form className={nameInputClasses}>
-          <label for='name'>Имя</label>
           <input
             type='text'
             id='name'
+            placeholder="Имя"
             onChange={nameChangeHandler}
             onBlur={nameBlurHandler}
             value={enteredName}
@@ -90,9 +97,9 @@ const SignUp = (props) => {
           {nameInputHasError && (<p className="error-text">имя не указано</p>)}
         </form>
         <form className={emailInputClasses}>
-          <label for='email'>Почта</label>
           <input type='text'
             id='email'
+            placeholder="Почта"
             onChange={emailChangeHandler}
             onBlur={emailBlurHandler}
             value={enteredEmail}
@@ -100,21 +107,24 @@ const SignUp = (props) => {
           {emailInputHasError && (<p className="error-text">почта не указана</p>)}
         </form>
         <div className={passwordInputClasses}>
-          <label for='pass'>Пароль (6 символов минимум)</label>
           <div clasName="password-label">
             <input type='password'
               id='pass'
+              placeholder="Пароль"
               onChange={passwordChangeHandler}
               onBlur={passwordBlurHandler}
               value={enteredPassword}
               minlength="6"
             />
-            <i class="far fa-eye"></i>
             {passwordInputHasError && (<p className="error-text">пароль не указан</p>)}
           </div>
         </div>
         <div className='form-actions'>
-          <button disabled={!formIsValid} onClick={SendData}>Войти</button>
+          <button className="ready" disabled={!formIsValid} onClick={SendData}>Готово!</button>
+          <div>
+            <button id="initial" onClick={changeType}>Вход</button>
+            <button id="initial" onClick={changeType}>Регистрация</button>
+          </div>
         </div>
       </div>
     </div>
