@@ -1,7 +1,7 @@
 import React from 'react';
 import Introduction from './Introduction';
-import "./Home.css";
 import SignUp from './SignUp';
+import LogIn from './LogIn';
 
 
 
@@ -10,6 +10,7 @@ const Home = () => {
         <div>
             
             <SignUp />
+            
            
         </div>
 
