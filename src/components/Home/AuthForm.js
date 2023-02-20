@@ -2,19 +2,18 @@ import React, { useState } from "react";
 import "./AuthForm.css";
 import "./Home-input.css"
 import useInput from "../hooks/use-input";
-import HttpPost from "../Services/HttpPost"
 
-const AuthForm = ({title}) => {
+const AuthForm = ({ title, wantAnother, sendData }) => {
 
- // const [signUp, setSignUp] = useState('Регистрация');
- // const [signUpT, setSignUpT] = useState(true);
- // function changeType() {
- //   setSignUp(signUp === 'Регистрация' ? 'Вход' : 'Регистрация');
- //   setSignUpT(!(signUpT === true));
- // }
+  // const [signUp, setSignUp] = useState('Регистрация');
+  // const [signUpT, setSignUpT] = useState(true);
+  // function changeType() {
+  //   setSignUp(signUp === 'Регистрация' ? 'Вход' : 'Регистрация');
+  //   setSignUpT(!(signUpT === true));
+  // }
 
 
-  const {
+  let {
     value: enteredEmail,
     isValid: enteredEmailIsValid,
     hasError: emailInputHasError,
@@ -23,7 +22,7 @@ const AuthForm = ({title}) => {
     reset: resetEmailInput,
   } = useInput(value => value.trim() !== "");
 
-  const {
+  let {
     value: enteredPassword,
     isValid: enteredPasswordIsValid,
     hasError: passwordInputHasError,
@@ -33,9 +32,10 @@ const AuthForm = ({title}) => {
   } = useInput(value => value.trim() !== "");
 
   let formIsValid = false;
-  if ( enteredEmailIsValid && enteredPasswordIsValid) {
+  if (enteredEmailIsValid && enteredPasswordIsValid) {
     formIsValid = true;
   }
+
 
   const FormSignUp = (event) => {
     event.preventDefault();
@@ -51,22 +51,18 @@ const AuthForm = ({title}) => {
 
   const passwordInputClasses = passwordInputHasError
     ? 'form-control invalid'
-    : 'form-control';
+    : 'form-control'
 
   const SendData = () => {
-    let data = {
-      email: enteredEmail,
-      password: enteredPassword
-    }
-
+    sendData(enteredEmail, enteredPassword)
   }
 
 
   return (
     <div className="HomeContainer">
       <div className="EnterContainer" onSubmit={FormSignUp}>
-      <h2 id="heading">Регистрация</h2>
-       
+        <h2 id="heading">Регистрация</h2>
+
         <form className={emailInputClasses}>
           <input type='text'
             id='email'
@@ -78,24 +74,24 @@ const AuthForm = ({title}) => {
           {emailInputHasError && (<p className="error-text">почта не указана</p>)}
         </form>
         <div className={passwordInputClasses}>
-          <div clasName="password-label">
-            <input type='password'
-              id='pass'
-              placeholder="Пароль"
-              onChange={passwordChangeHandler}
-              onBlur={passwordBlurHandler}
-              value={enteredPassword}
-              minLength="6"
-            />
-            {passwordInputHasError && (<p className="error-text">пароль не указан</p>)}
-          </div>
+
+          <input type='password'
+            id='pass'
+            placeholder="Пароль (6 символов и больше)"
+            onChange={passwordChangeHandler}
+            onBlur={passwordBlurHandler}
+            value={enteredPassword}
+
+          />
+          {passwordInputHasError && (<p className="error-text">пароль не указан</p>)}
+          {enteredPassword.length < 6 && enteredPassword.length >= 1 && (<p className="error-text">пароль слишком короткий</p>)}
+
         </div>
         <div className='form-actions'>
           <button className="ready" disabled={!formIsValid} onClick={SendData}>{title}</button>
-          <div>
-            <button id="initial" >Вход</button>
-            <button id="initial" >Регистрация</button>
-          </div>
+          <div>{wantAnother}</div>
+          <span>Войти.</span>
+
         </div>
       </div>
     </div>

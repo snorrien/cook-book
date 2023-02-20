@@ -1,12 +1,12 @@
-import {useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import AuthForm from "./AuthForm";
-import {setUser} from "../../store/slices/userSlice";
+import { setUser } from "../../store/slices/userSlice";
 
 const LogIn = () => {
     const dispatch = useDispatch();
-    
+
     const handleLogin = (email, password) => {
         const auth = getAuth();
         signInWithEmailAndPassword(auth, email, password)
@@ -16,8 +16,9 @@ const LogIn = () => {
 
     return (
         <AuthForm
-            title="sign in"
-            SendData={handleLogin}
+            title="Войти"
+            sendData={handleLogin}
+            wantAnother="У меня уже есть аккаунт."
         />
     )
 }
