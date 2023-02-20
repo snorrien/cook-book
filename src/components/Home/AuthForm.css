@@ -43,6 +43,10 @@
   flex: 1;
 }
 
+.form-actions{
+  margin-bottom: 1rem;
+}
+
 button {
   font: inherit;
   background-color: #240370;
@@ -51,6 +55,7 @@ button {
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
   cursor: pointer;
+ 
 }
 
 button:hover,

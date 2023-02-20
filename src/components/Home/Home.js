@@ -10,7 +10,7 @@ const Home = () => {
         <div>
             
             <SignUp />
-            
+            <p>adtfgsdrtg</p>
            
         </div>
 

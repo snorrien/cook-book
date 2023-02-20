@@ -3,7 +3,7 @@ import "./AuthForm.css";
 import "./Home-input.css"
 import useInput from "../hooks/use-input";
 
-const AuthForm = ({ title, wantAnother, sendData }) => {
+const AuthForm = ({ title, sendData }) => {
 
   // const [signUp, setSignUp] = useState('Регистрация');
   // const [signUpT, setSignUpT] = useState(true);
@@ -59,42 +59,38 @@ const AuthForm = ({ title, wantAnother, sendData }) => {
 
 
   return (
-    <div className="HomeContainer">
-      <div className="EnterContainer" onSubmit={FormSignUp}>
-        <h2 id="heading">Регистрация</h2>
 
-        <form className={emailInputClasses}>
-          <input type='text'
-            id='email'
-            placeholder="Почта"
-            onChange={emailChangeHandler}
-            onBlur={emailBlurHandler}
-            value={enteredEmail}
-          />
-          {emailInputHasError && (<p className="error-text">почта не указана</p>)}
-        </form>
-        <div className={passwordInputClasses}>
+    <div onSubmit={FormSignUp}>
+      <h2 id="heading">Регистрация</h2>
 
-          <input type='password'
-            id='pass'
-            placeholder="Пароль (6 символов и больше)"
-            onChange={passwordChangeHandler}
-            onBlur={passwordBlurHandler}
-            value={enteredPassword}
+      <form className={emailInputClasses}>
+        <input type='text'
+          id='email'
+          placeholder="Почта"
+          onChange={emailChangeHandler}
+          onBlur={emailBlurHandler}
+          value={enteredEmail}
+        />
+        {emailInputHasError && (<p className="error-text">почта не указана</p>)}
+      </form>
+      <div className={passwordInputClasses}>
 
-          />
-          {passwordInputHasError && (<p className="error-text">пароль не указан</p>)}
-          {enteredPassword.length < 6 && enteredPassword.length >= 1 && (<p className="error-text">пароль слишком короткий</p>)}
+        <input type='password'
+          id='pass'
+          placeholder="Пароль (6 символов и больше)"
+          onChange={passwordChangeHandler}
+          onBlur={passwordBlurHandler}
+          value={enteredPassword}
 
-        </div>
-        <div className='form-actions'>
-          <button className="ready" disabled={!formIsValid} onClick={SendData}>{title}</button>
-          <div>{wantAnother}</div>
-          <span>Войти.</span>
-
-        </div>
+        />
+        {passwordInputHasError && (<p className="error-text">пароль не указан</p>)}
+        {enteredPassword.length < 6 && enteredPassword.length >= 1 && (<p className="error-text">пароль слишком короткий</p>)}
+      </div>
+      <div className='form-actions'>
+        <button className="ready" disabled={!formIsValid} onClick={SendData}>{title}</button>
       </div>
     </div>
+
   );
 };
 
