@@ -2,30 +2,28 @@ import { useDispatch } from 'react-redux';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import AuthForm from './AuthForm';
 import "./Home-input.css";
-import { setUser } from "../../store/slices/userSlice";
+import { userAdded } from "../../store/slices/usersSlice";
 import { useLocation, Link } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-const SignUp = () => {
+
+const SignUp = ({ setIsSignedUp }) => {
   const dispatch = useDispatch();
   const { push } = useLocation();
 
   const handleRegister = (email, password) => {
-    console.log("handleRegister");
     const auth = getAuth();
-    console.log(auth)
     createUserWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {
-        console.log(user);
-        dispatch(setUser({
+        dispatch(userAdded({
           email: user.email,
-          id: user.uid,
-          token: user.accessToken,
+          uid: user.uid,
+          accessToken: user.accessToken,
         }));
-        push("/")
+        setIsSignedUp(true);
       })
       .catch(console.error)
-
-
   }
 
   return (
@@ -37,7 +35,7 @@ const SignUp = () => {
           sendData={handleRegister}
         />
         <p>
-          У меня уже есть аккаунт. <Link to="/login">Войти.</Link>
+          У меня уже есть аккаунт. <a className = "changing">Boйти.</a>
         </p>
       </div>
     </div>
