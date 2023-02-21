@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import AuthForm from "./AuthForm";
-import { setUser } from "../../store/slices/userSlice";
+import { setUser } from "../../store/slices/usersSlice";
 
 const LogIn = () => {
     const dispatch = useDispatch();
@@ -15,12 +15,16 @@ const LogIn = () => {
     }
 
     return (
-        <AuthForm
-            title="Войти"
-            sendData={handleLogin}
-            wantAnother="У меня уже есть аккаунт."
-        />
+        <div className="HomeContainer">
+            <div className="EnterContainer">
+                <AuthForm
+                    title="Войти"
+                    sendData={handleLogin}
+                />
+            </div>
+        </div>
     )
+        
 }
 
 export default LogIn;

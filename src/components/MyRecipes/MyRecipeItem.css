@@ -11,3 +11,11 @@
 .card-rapper{
     margin-bottom: 10px;
 }
+
+.image-card {
+    background: rgb(241, 241, 241);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+   }
