@@ -6,9 +6,10 @@ import { userAdded } from "../../store/slices/usersSlice";
 import { useLocation, Link } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
+import LogIn from './LogIn';
 
 
-const SignUp = ({ setIsSignedUp }) => {
+const SignUp = ({ setTab }) => {
   const dispatch = useDispatch();
   const { push } = useLocation();
 
@@ -21,7 +22,7 @@ const SignUp = ({ setIsSignedUp }) => {
           uid: user.uid,
           accessToken: user.accessToken,
         }));
-        setIsSignedUp(true);
+        setTab("intro");
       })
       .catch(console.error)
   }
@@ -35,7 +36,7 @@ const SignUp = ({ setIsSignedUp }) => {
           sendData={handleRegister}
         />
         <p>
-          У меня уже есть аккаунт. <a className = "changing">Boйти.</a>
+          У меня уже есть аккаунт. <button onClick={() => setTab("logIn")} >Boйти.</button>
         </p>
       </div>
     </div>

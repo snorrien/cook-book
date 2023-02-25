@@ -4,13 +4,16 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import AuthForm from "./AuthForm";
 import { setUser } from "../../store/slices/usersSlice";
 
-const LogIn = () => {
+const LogIn = ({ setTab }) => {
     const dispatch = useDispatch();
 
     const handleLogin = (email, password) => {
         const auth = getAuth();
         signInWithEmailAndPassword(auth, email, password)
-            .then(console.log)
+            .then(({ user }) => {
+               
+                setTab("intro");
+            })
             .catch(console.log)
     }
 
@@ -21,10 +24,13 @@ const LogIn = () => {
                     title="Войти"
                     sendData={handleLogin}
                 />
+                 <p>
+          У меня ещё нет аккаунта. <button onClick={() => setTab("signUp")} >Зарегистрироваться.</button>
+        </p>
             </div>
         </div>
     )
-        
+
 }
 
 export default LogIn;

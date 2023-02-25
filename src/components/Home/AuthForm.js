@@ -61,7 +61,7 @@ const AuthForm = ({ title, sendData }) => {
   return (
 
     <div onSubmit={FormSignUp}>
-      <h2 id="heading">Регистрация</h2>
+      <h2 id="heading">{title}</h2>
 
       <form className={emailInputClasses}>
         <input type='text'
