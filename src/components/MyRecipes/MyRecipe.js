@@ -38,7 +38,7 @@ const MyRecipe = () => {
             <div className='page-title'>
             <h1> Мои рецепты</h1>
             </div>
-            <div class="row ">
+            <div className="row ">
                 {itemList}
             </div>
         </div>
