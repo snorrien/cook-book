@@ -5,10 +5,10 @@ In the project directory, you can run:
 
 # About the project
 
-This is the web version of the classic cookbook. The project is made on JS and React framework. This allows users to register or log into an existing account. Add the name of the recipe, the list of ingredients, the cooking process to the special form. Save the entered recipes and show them on the page with your recipes.
+This is the web version of the classic cookbook. The project is made on JS and React framework. This allows users to register or log into an existing account. Add the name of the recipe, the list of ingredients, the cooking process to the special form. Save the entered recipes and show them on the page with all recipes.
 
 # To be added
 
 1. setting user access only to their own recipes
-2. Adding Responsive Responsive Layout
-3.upload photos of recipes by users
+2. adding responsive and adaptive layout
+3. upload photos of recipes by users
