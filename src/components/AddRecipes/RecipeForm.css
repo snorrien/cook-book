@@ -1,16 +1,20 @@
-
 .new-recipe__title {
   display: flex;
   justify-content: space-between;
 }
+
 @media screen and (max-width: 550px) {
   .new-recipe__title {
     display: block;
-   
   }
+
 }
 
-.label_title input{
+.new-recipe__container {
+  padding: 0;
+}
+
+.label_title input {
   font: inherit;
   padding: 0.5rem;
   border-radius: 6px;
@@ -19,7 +23,7 @@
   max-width: 100%;
 }
 
-.label_title_date input{
+.label_title_date input {
   font: inherit;
   padding: 0.5rem;
   border-radius: 6px;
@@ -28,13 +32,15 @@
   max-width: 100%;
 }
 
-.new-recipe__control{
+.new-recipe__control {
   text-align: left;
   overflow: visible;
 }
-.new-recipe_time{
+
+.new-recipe_time {
   text-align: left;
 }
+
 .new-recipe__time input {
   font: inherit;
   padding: 0.5rem;
@@ -45,10 +51,12 @@
   display: flex;
 
 }
-#newtask{
+
+#newtask {
   display: flex;
   justify-content: space-between;
 }
+
 .new-recipe__add-ingredients input {
   font: inherit;
   padding: 0.5rem;
@@ -59,14 +67,27 @@
   display: flex;
 }
 
-.ingredients-list{
+.label_title_save{
+
   text-align: left;
-  margin: 1rem;
+
 }
-.ingredients-list span{
+
+.ingredients-list {
+  text-align: left;
+}
+
+.ingredients-list span {
   margin-right: 1rem;
 }
 
+.img-trash{
+  height: 20px;
+}
+
+.img-plus{
+  height: 20px;
+}
 
 .new-recipe__control textarea {
   font: inherit;
@@ -83,10 +104,14 @@
   resize: both;
 }
 
-
 .new-recipe__action-add {
   text-align: right;
   margin-top: 15px;
+
+}
+
+.adding_ingr{
+  padding: 2px;
 
 }
 

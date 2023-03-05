@@ -8,29 +8,7 @@
     text-align: center;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
   }
-  
-  .new-recipe button {
-    font: inherit;
-    cursor: pointer;
-    padding: 0.6rem 2rem;
-    border: 1px solid #40005d;
-    background-color: #40005d;
-    color: white;
-    border-radius: 12px;
-    margin-right: 1rem;
-  }
-  
-  .new-recipe button:hover,
-  .new-recipe button:active {
-    background-color: #510674;
-    border-color: #510674;
-  }
-  
-  .new-recipe button.alternative {
-    color: #220131;
-    border-color: transparent;
-    background-color: transparent;
-  }
+
   
   .new-recipe button.alternative:hover,
   .new-recipe button.alternative:active {

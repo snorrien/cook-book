@@ -1,8 +1,9 @@
 import React from 'react';
 import "./MyRecipe.css";
 import MyRecipeItem from './MyRecipeItem';
+import { showRecipe } from '../../store/myRecipeStore/GetRecipe';
 
-
+console.log(showRecipe());
 
 const ITEMS_RES = [
     {
@@ -11,17 +12,6 @@ const ITEMS_RES = [
         ingredients: ["one", "two", "three"],
 
     },
-    {
-        id: "res2",
-        title: 'Name_2',
-        ingredients: ["one", "two", "three"],
-
-    },
-    {
-        id: "res3",
-        title: 'Name_3',
-        ingredients: ["one", "two", "three"],
-    }
 ];
 
 const MyRecipe = () => {

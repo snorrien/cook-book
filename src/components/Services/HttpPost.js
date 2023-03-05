@@ -1,5 +1,3 @@
-
-
 const HttpPost = async (data) => {
     await fetch("http://localhost:5276/auth/signup", {
         method: "POST",
