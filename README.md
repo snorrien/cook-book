@@ -10,5 +10,5 @@ This is the web version of the classic cookbook. The project is made on JS and R
 # To be added
 
 1. setting user access only to their own recipes
-2. adding responsive and adaptive layout
+2. the ability to view the added recipe and make changes
 3. upload photos of recipes by users
