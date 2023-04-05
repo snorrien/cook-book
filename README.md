@@ -15,7 +15,7 @@ You can create a new profile or go to an existing one. I use Firebase for this o
 
 ![image](https://user-images.githubusercontent.com/120132990/230053271-7013cfcd-ff5e-4c69-9abf-b7d6cdb0e441.png)
 
-![image](https://user-images.githubusercontent.com/120132990/230053811-17d344c1-463d-405e-8e93-6a4a5957c2f7.png)
+![image](https://user-images.githubusercontent.com/120132990/230054529-77c1a50b-e12f-4a46-bf85-8634637329c0.png)
 
 ![image](https://user-images.githubusercontent.com/120132990/230053887-181f8826-5048-45bb-ba5e-686b9fe3eeb7.png)
 
