@@ -7,8 +7,22 @@ In the project directory, you can run:
 
 This is the web version of the classic cookbook. The project is made on JS and React framework. This allows users to register or log into an existing account. Add the name of the recipe, the list of ingredients, the cooking process to the special form. Save the entered recipes and show them on the page with all recipes.
 
+# What can it do?
+
+You can create a new profile or go to an existing one. I use Firebase for this options. You cannot click on the register/login button if you have not filled in or incorrectly filled in the required text labels. After entering the site, you are redirected to the main page.
+
+![image](https://user-images.githubusercontent.com/120132990/230053117-7731c105-edb4-485b-bf80-70aaea18b1d8.png)
+
+![image](https://user-images.githubusercontent.com/120132990/230053271-7013cfcd-ff5e-4c69-9abf-b7d6cdb0e441.png)
+
+![image](https://user-images.githubusercontent.com/120132990/230053811-17d344c1-463d-405e-8e93-6a4a5957c2f7.png)
+
+![image](https://user-images.githubusercontent.com/120132990/230053887-181f8826-5048-45bb-ba5e-686b9fe3eeb7.png)
+
 # To be added
 
 1. setting user access only to their own recipes
 2. the ability to view the added recipe and make changes
 3. upload photos of recipes by users
+
+![image](https://user-images.githubusercontent.com/120132990/230051206-73a21ee7-58a3-4680-9223-f7acde62336c.png)
